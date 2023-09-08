@@ -1,0 +1,360 @@
+           #FUNCTIONS (DAY 4)
+
+
+
+#Q2 WAF check if given string is palindrome?
+#ans
+"""def isPalindrome(s):
+	return s == s[::-1]
+
+
+# Driver code
+s = "malayalam"
+ans = isPalindrome(s)
+
+if ans:
+	print("Yes")
+else:
+	print("No")
+"""
+#Q3implement function that returns the factorial of given number using recursion?
+#ans
+"""def factorial(x):
+	if x==1:
+		return 1  
+	else:
+		return(x*factorial(x-1))
+num=3
+print(factorial(num))"""
+
+#Q4creat function to find square of each element in given list?
+"""def square(num):
+	return num **2
+num1=[1,2,3,4,5,6,7,8]
+v=list(map(square,num1))
+print(v)"""
+
+#5 WAF check if number is even or odd and return "Even or "Odd" accordingly?
+#ans
+"""def evenodd(n):
+	if(n==0):
+		return True
+	elif(n==1):
+		return False
+	else:
+		return evenodd(n-2)
+num=12
+if(evenodd(num)):
+	print("num is even")
+else:
+	print("num is odd")"""
+
+#2nd answ even odd
+"""def evenodd(num):
+	if num % 2==0:
+		print("even num")
+	else:
+		print("odd number")
+evenodd(21)"""
+
+#6 calculat the area of triangle given its base and hights using function?
+#ans
+"""class code:
+	def area(sself,x,y):
+		ar=0.5*x*y  
+		return ar
+print("Enter lenght of base and hight:",end="")
+b=float(input())
+h=float(input())
+obj=code()
+a=obj.area(b,h)
+print("\nArea={:.2f}".format(a))"""
+
+#7creat a function take a list of string and return the list sorted alphabetically?
+#ans
+"""def name(arguments):
+	return expression
+companies=[('google',2019,134.81),('Apple',2019,26.0),('Facebook',2019,70.7)]
+companies.sort(key=lambda company:company[2])
+print(companies)
+"""
+
+#8WAF takes two list and returns their intersection(common element)?
+#ans
+"""def common(a,b):
+	a=set(a)
+	b=set(b)
+	if (a & b):
+		print(a & b)
+	else:
+		print("no common elements")
+a=[1,2,3,4,5]
+b=[5,6,7,8,9]
+common(a,b)
+"""
+
+#9 Implement a function to check if given year is a leap year or not?
+#ans
+"""def ISLP(y):
+  if((y % 400 == 0) or
+     (y % 100 != 0) and
+     (y % 4 == 0)):
+    return 1;
+  else:
+    return 0;
+ 
+# Driver code
+if __name__=='__main__':
+ 
+  year = 2020;
+  print(ISLP(year));"""
+
+#10 creat a function that takes a number as input and prints its multiplication table?
+#ans
+# Python3 program to print table of a number
+# using recursion
+
+# print_table() prints table of number and takes
+# 1 required value that is number of whose teble to be printed
+# and an optional input i whose default value is 1
+"""def print_table(n, i=1):
+
+	if (i == 11): # base case
+		return
+	print(n, "*", i, "=", n * i)
+	i += 1 # increment i
+	print_table(n, i)
+
+# Driver Code
+n = 5
+print_table(n)"""
+
+
+               #STRING MANIPULATION  (DAY 5)
+
+# WAF to count the number of vowels in a given string?
+"""def vowel_count(str):
+    count = 0
+    vowel = set("aeiouAEIOU")
+    for alphabet in str:
+     
+        if alphabet in vowel:
+            count = count + 1
+     
+    print(count)
+str = "GeeksforGeeks"
+vowel_count(str)"""
+
+               ####PRACTICE QUESTIONS
+#1 given a list of words.concatenate them into a single string seprated by spaces.?
+"""def convert(lst):
+	return ' '.join(lst)
+lst=['geeks','for','geeks']
+print(convert(lst))"""
+
+#2 creat a function to reverse a given string?
+"""def reverse(s):
+	str=" "
+	for i in s:
+		str=i+str
+	return str
+s="Geeksforgeeks"
+print(reverse(s))"""
+
+#3 wAP that takes a sentence as input and counts the number of words in it?
+"""s="Medium is a great publication."
+	
+	def count(sentence):
+		num=len(sentence.split())
+		return num
+	print(count(s))
+	"""
+
+#4 implement a function that checks if given string is pangram?
+#ans
+"""def pangram(str):
+	alphabet='abcdefghijklmnopqrstuvwxyz'
+	for char in alphabet:
+		if char not in str.lower():
+			return False
+		return True
+str='The quick brown fox jump over the lazy dog'
+if(pangram(str)==True):
+	print("Yes")
+else:
+	print("No")"""
+
+#5 given string write a function to remove all vowels from it and return the modified string?
+#ans
+"""def remove_vowels(string):
+     vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+     result = ''.join([char for char in string if char not in vowels])
+     return result
+ strings = ["Hello", "World", "Python"]
+ output_strings = [remove_vowels(string) for string in strings]
+ print(output_strings)"""
+
+#6 WAPG to find largest word in sentence?
+#ans
+"""def longest(s):
+	s=s.split()
+	print(max(s,key=len))
+if __name__=="__main__":
+	s="be confident and be yourself"
+longest(s)"""
+
+#7 CAF that takes sentence as a input and return the sentence in reverse order?
+#ans
+"""def revers(sentence):
+	return ' '.join(word[::-1] for word in sentence.split(" "))
+sentence="Geeks for Geeks"
+print(revers(sentence))"""
+
+#8 given a list of names,count the number of names that start with a vowel?
+"""def check(string,vowel):
+	final=[x for x in string if x in vowel]
+	print(len(final))
+	print(final)
+string="Geeks for Geeks"
+vowel='AaEeIiOoUu'
+check(string,vowel)"""
+
+#9 WAF to remove all duplicat characters from given string?
+#ans
+"""def remove(str,n):
+	s=set()
+	for i in str:
+		s.add(i)
+	st=" "
+	for i in s:
+		st=st+i
+	return st 
+str="geeksforgeeks"
+n=len(str)
+print(remove(list(str),n))"""
+
+#10implement a program that takes a sentence and a word as input checks if the word is present in the sentence?
+#ans
+"""def present(sentence,word):
+	s=sentence.split(" ")
+	for i in s:
+		if(i==word):
+			return True
+	return False
+s="Geeks for Geeks"
+word="Geeks"
+if (present(s,word)):
+	print('Yes')
+else:
+	print(No)
+"""
+
+             #LIST AND TUPLE
+          #Example Questions
+#1given a list of numbers, find the sum and average using built in function?
+"""def sum_avg_list(lst, n):
+	if n == 0:
+		return (0, 0)
+	else:
+		sum, avg = sum_avg_list(lst, n-1)
+		return (sum + lst[n-1], avg + 1)
+
+def avg_list(lst):
+	sum, avg = sum_avg_list(lst, len(lst))
+	return sum/avg
+
+lst = [4, 5, 1, 2, 9, 7, 10, 8]
+print(sum_avg_list(lst, len(lst))[0])
+print(avg_list(lst))
+"""
+
+#2 create a list of fruits and add a new fruit to the list?
+"""items = ["Apple", "Banana", "Orange"]
+items.append("Kiwi")
+print(items)"""
+
+#3Access elements in a tuple using indexing?
+"""t1=(4,2,5,6,7,5)
+print(t1.index(5))"""
+
+
+                  ####PRACTICE QUESTION
+#1given two list of numbers,concatenate them into a single list?
+"""t1=[1,4,5,6,5]
+t2=[3,5,7,2,5]
+
+list=[y for x in[t1,t2] for y in x]
+print(str(list))"""
+
+#2write a program that finds the largest and smallest elements in a list?
+"""arr=[1,2,3,4,5,6,7,8,9,10]
+print(min(arr))
+print(max(arr))"""
+
+#3 Implement a function that takes a list of numbers and return a new list with the squared values?
+"""v=[1,2,3,4,5]
+def square(num):
+	return num**2
+n=list(map(square,v))
+print(n) """
+
+#4create a program that find the common elements between two lists and stores them in a new list?
+"""def commom(a,b):
+	result=[i for i in a if i in b]
+	return result
+a=[1,2,3,4,5]
+b=[5,6,7,8,9]
+print(commom(a,b))"""
+
+#5 given a list of words,find the word with the maximum length and its lenght?
+"""def long(words):
+	res=max(words,key=len)
+	print(res,len(res))
+a=['one','two','third','four']
+long(a)"""
+
+#6 WAP to count the occurences of each element in given list?
+"""def count(lst,x):
+	count=0
+	for ele in lst:
+		if(ele==x):
+			count=count+1
+		return count
+lst=[8,6,8,10,8,20,10,8,8]
+x=8
+print('{} has ocuured {} times'.format(x,count(lst,x)))"""
+
+#7given a list of name remove all duplicate names and print the unique names?
+"""def remove(duplicate):
+	flst=[]
+	for num in duplicate:
+		if num not in flst:
+			flst.append(num)
+	return flst
+duplicate=[2,4,10,20,5,2,20,4]
+print(remove(duplicate))
+"""
+
+#8 create a function that takes a list of strings and returns the list sorted by the lenght of the string?
+"""def sorting(lst):
+	lst.sort(key=len)
+	return lst
+lst=['rohan','amy','sapna','mohammad','aakash','raunak','chinmoy']
+print(sorting(lst))"""
+
+#9 WAP to check if a given list is sorted in ascending order??
+"""def lst(ls):
+	for i in range(1,len(ls)):
+		if ls[i]< ls[i-1]:
+			return False
+	return True
+ls=[1,2,3,4,5]
+print(lst(ls))"""
+
+#10 Implement a function that takes two lists and returns their union(all unique element from both lists.)
+"""def union(lst1,lst2):
+	flst=lst1+lst2
+	return flst
+lst1=[23,15,2,14,14,16,20,52]
+lst2=[2,48,15,12,26,32,47,54]
+print(union(lst1,lst2))"""
